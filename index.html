@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f1eb" />
+  <title>Приглашение для тебя ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="grain"></div>
+    <header class="topline"><span>ОСОБЕННОЕ ПРИГЛАШЕНИЕ</span><span>♡</span></header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span> только для тебя</div>
+      <h1>Давай сбежим<br><em>на свидание?</em></h1>
+      <p class="intro">Я хочу провести с тобой один красивый вечер.<br>А место и время предлагаю выбрать тебе.</p>
+      <a class="scroll-link" href="#choice">ВЫБРАТЬ НАШ ВЕЧЕР <span>↓</span></a>
+      <div class="hero-art" aria-label="Уютный вечер при свечах">
+        <div class="photo-overlay"></div>
+        <div class="photo-caption">a little date, a little magic</div>
+      </div>
+      <div class="floating-heart">♡</div>
+    </section>
+
+    <section class="booking" id="choice">
+      <div class="section-heading">
+        <span class="eyebrow">ТВОЙ ВЫБОР</span>
+        <h2>Куда отправимся?</h2>
+        <p>У меня есть пара идей, но твой вариант тоже welcome.</p>
+      </div>
+
+      <form id="inviteForm">
+        <div class="restaurant-grid">
+          <label class="restaurant-card">
+            <input type="radio" name="restaurant" value="Хачапури и вино" required>
+            <span class="restaurant-image khachapuri"></span>
+            <span class="restaurant-info"><strong>Хачапури и вино</strong><small>Грузинская кухня · уютные вечера</small><a href="https://hachapuriivino.ru/" target="_blank" rel="noopener">Посмотреть ресторан ↗</a></span>
+            <span class="select-mark">✓</span>
+          </label>
+          <label class="restaurant-card">
+            <input type="radio" name="restaurant" value="Якитория">
+            <span class="restaurant-image yakitoria"></span>
+            <span class="restaurant-info"><strong>Якитория</strong><small>Японская кухня · любимая классика</small><a href="https://yakitoriya.ru/" target="_blank" rel="noopener">Посмотреть ресторан ↗</a></span>
+            <span class="select-mark">✓</span>
+          </label>
+        </div>
+
+        <label class="custom-option">
+          <input type="radio" name="restaurant" value="Свой вариант">
+          <span class="custom-radio"></span>
+          <span><strong>У меня есть идея получше</strong><small>Выберу ресторан сама</small></span>
+        </label>
+        <input class="text-input custom-input" id="customRestaurant" name="customRestaurant" placeholder="Напиши название ресторана или адрес" maxlength="180" />
+
+        <div class="form-divider"></div>
+        <div class="section-heading compact">
+          <span class="eyebrow">ПЛАНИРУЕМ ВЕЧЕР</span>
+          <h2>Когда тебе удобно?</h2>
+        </div>
+        <div class="field-grid">
+          <label class="field"><span>Дата</span><input class="text-input" type="date" id="date" name="date" required></label>
+          <label class="field"><span>Время</span><input class="text-input" type="time" id="time" name="time" required></label>
+        </div>
+        <label class="field wishes"><span>Что-нибудь, что мне стоит знать? <i>необязательно</i></span><textarea class="text-input" id="wishes" name="wishes" rows="3" maxlength="700" placeholder="Например, хочу столик у окна…"></textarea></label>
+        <button class="submit-button" type="submit"><span>Отправить мой выбор</span><b>↗</b></button>
+        <p class="privacy-note">Твой ответ придёт прямо мне. Обещаю учесть все пожелания ♡</p>
+        <p class="error-message" id="errorMessage" role="alert"></p>
+      </form>
+    </section>
+
+    <section class="ending">
+      <div class="ending-heart">♡</div>
+      <p>Главное — не ресторан.</p>
+      <h2>Главное, что <em>мы</em><br>будем вместе.</h2>
+      <span>Жду твой выбор</span>
+    </section>
+    <footer>Сделано с теплом и небольшой долей волнения ♡</footer>
+  </main>
+  <div class="success-screen" id="successScreen" aria-hidden="true">
+    <div class="success-card">
+      <div class="success-heart">♡</div>
+      <span class="eyebrow">ОТВЕТ ПОЛУЧЕН</span>
+      <h2>Ну всё,<br><em>это свидание!</em></h2>
+      <p>Я получил твой выбор. Скоро всё организую ❤️</p>
+      <button type="button" id="closeSuccess">Ура!</button>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
