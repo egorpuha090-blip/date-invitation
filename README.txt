@@ -44,3 +44,4 @@
 - Тексты и внешний вид: index.html и style.css.
 - Логика формы: script.js.
 - Telegram-отправка: netlify/functions/submit-invitation.js.
+Telegram configuration updated.
